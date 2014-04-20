@@ -1,0 +1,38 @@
+# $Id: POLICY 292 2009-10-20 15:56:57Z stephan $
+#
+# BSDanywhere Project Development Policies
+#
+
+Subversion Organisation
+=======================
+
+trunk/
+    The main development line. Tested code. Always builds.
+    Always generates a working image.
+
+branches/
+    Developers' branch. For testing, playing around and
+    brave innovation. Can build. May contain untested code.
+
+releases/
+    Twice a year trunk gets copied into releases/XX. No development.
+
+
+Development Guidelines
+======================
+
+- Everybody should make sure to merge back from their branch into trunk by
+  using small diffs. Don't play for months and commit one huge diff.
+- Make sure trunk/ always builds and generates a proper image.
+  No reason to be shy about commiting into trunk. As long as everything
+  builds fine, no problem. ;)
+- Develop on a Unix-alike system. Files containing CRs will be backed out.
+- Avoid Perl or other high level languages whenever possible. Always use
+  shell code (ksh) or make in the build scripts, instead.
+- All commitments must be licensed under a BSD/ISC alike license.
+- All commits are emailed to bsdanywhere-source@googlegroups.com.
+- Help, questions or answers should go to bsdanywhere@googlegroups.com.
+- Do not add code or features that prevent people from trying or using
+  OpenBSD. We do not compete with the OpenBSD project and don't want to
+  cut into their CD sales.
+- BSDanywhere ISO images must not exceed 736970752 bytes.
